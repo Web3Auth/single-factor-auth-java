@@ -1,8 +1,7 @@
 plugins {
     id 'java-library'
+    id 'maven-publish'
 }
-
-apply plugin: 'maven-publish'
 
 group 'com.github.web3auth'
 version '0.0.1'
