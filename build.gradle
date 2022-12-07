@@ -4,8 +4,8 @@ plugins {
 
 apply plugin: 'maven-publish'
 
-group 'org.torusresearch'
-version '1.0.0'
+group 'com.github.web3auth'
+version '0.0.1'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
