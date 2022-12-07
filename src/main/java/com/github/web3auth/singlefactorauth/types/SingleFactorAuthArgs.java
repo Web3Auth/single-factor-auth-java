@@ -1,4 +1,4 @@
-package org.torusresearch.singlefactorauth.types;
+package com.github.web3auth.singlefactorauth.types;
 
 import org.torusresearch.fetchnodedetails.FetchNodeDetails;
 import org.torusresearch.fetchnodedetails.types.TorusNetwork;

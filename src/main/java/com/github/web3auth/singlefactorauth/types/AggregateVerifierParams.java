@@ -1,4 +1,4 @@
-package org.torusresearch.singlefactorauth.types;
+package com.github.web3auth.singlefactorauth.types;
 
 public class AggregateVerifierParams {
     private VerifierParams[] verify_params;
