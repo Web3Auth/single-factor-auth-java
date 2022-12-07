@@ -1,6 +1,6 @@
 # Single-Factor-Auth-Java
 
-[![](https://jitpack.io/v/org.torusresearch/single-factor-auth-java.svg)](https://jitpack.io/#org.torusresearch/single-factor-auth-java)
+[![](https://jitpack.io/v/com.github.web3auth/single-factor-auth-java.svg)](https://jitpack.io/#com.github.web3auth/single-factor-auth-java)
 
 > Web3Auth is where passwordless auth meets non-custodial key infrastructure for Web3 apps and wallets. By aggregating OAuth (Google, Twitter, Discord) logins, different wallets and innovative Multi Party Computation (MPC) - Web3Auth provides a seamless login experience to every user on your application.
 
@@ -30,7 +30,7 @@ repositories {
         maven { url "https://jitpack.io" }
    }
    dependencies {
-         implementation 'org.torusresearch:single-factor-auth-java:1.0.0'
+         implementation 'com.github.web3auth:single-factor-auth-java:1.0.0'
    }
 ```
 
