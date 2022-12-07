@@ -1,4 +1,4 @@
-package org.torusresearch.types;
+package org.torusresearch.singlefactorauth.types;
 
 public class AggregateVerifierParams {
     private VerifierParams[] verify_params;

@@ -1,11 +1,11 @@
-package org.torusresearch;
+package org.torusresearch.singlefactorauth;
 
 import org.torusresearch.fetchnodedetails.FetchNodeDetails;
 import org.torusresearch.fetchnodedetails.types.NodeDetails;
+import org.torusresearch.singlefactorauth.types.*;
 import org.torusresearch.torusutils.TorusUtils;
 import org.torusresearch.torusutils.helpers.Utils;
 import org.torusresearch.torusutils.types.*;
-import org.torusresearch.types.*;
 import org.web3j.crypto.Hash;
 
 import java.util.ArrayList;

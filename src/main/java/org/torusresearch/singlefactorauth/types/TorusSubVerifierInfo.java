@@ -1,4 +1,4 @@
-package org.torusresearch.types;
+package org.torusresearch.singlefactorauth.types;
 
 public class TorusSubVerifierInfo {
     String verifier;

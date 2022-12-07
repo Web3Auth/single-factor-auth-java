@@ -1,4 +1,4 @@
-package org.torusresearch.types;
+package org.torusresearch.singlefactorauth.types;
 
 import org.torusresearch.fetchnodedetails.FetchNodeDetails;
 import org.torusresearch.fetchnodedetails.types.TorusNetwork;
