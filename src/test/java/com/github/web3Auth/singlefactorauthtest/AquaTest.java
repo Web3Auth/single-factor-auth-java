@@ -26,7 +26,7 @@ import java.security.spec.ECPublicKeySpec;
 import java.security.spec.InvalidKeySpecException;
 import java.util.concurrent.ExecutionException;
 
-public class SingleFactorAuthTest {
+public class AquaTest {
 
     static SingleFactorAuth singleFactorAuth;
     static SingleFactorAuthArgs singleFactorAuthArgs;
@@ -40,7 +40,7 @@ public class SingleFactorAuthTest {
     @BeforeAll
     static void setup() throws IOException, NoSuchAlgorithmException, InvalidKeySpecException {
         System.out.println("Setup Starting");
-        singleFactorAuthArgs = new SingleFactorAuthArgs(TorusNetwork.TESTNET);
+        singleFactorAuthArgs = new SingleFactorAuthArgs(TorusNetwork.AQUA);
         singleFactorAuth = new SingleFactorAuth(singleFactorAuthArgs);
         ECPrivateKey privateKey = (ECPrivateKey) PemUtils.readPrivateKeyFromFile("src/test/java/com/github/web3Auth/singlefactorauth/keys/key.pem", "EC");
         ECPublicKey publicKey = (ECPublicKey) KeyFactory.getInstance("EC").generatePublic(new ECPublicKeySpec(privateKey.getParams().getGenerator(),
@@ -54,9 +54,9 @@ public class SingleFactorAuthTest {
         String idToken = JwtUtils.generateIdToken(TORUS_TEST_EMAIL, algorithmRs);
         loginParams = new LoginParams(TEST_VERIFIER, TORUS_TEST_EMAIL, idToken);
         TorusKey torusKey = singleFactorAuth.getKey(loginParams).get();
-        BigInteger requiredPrivateKey = new BigInteger("296045a5599afefda7afbdd1bf236358baff580a0fe2db62ae5c1bbe817fbae4", 16);
+        BigInteger requiredPrivateKey = new BigInteger("d8204e9f8c270647294c54acd8d49ee208789f981a7503158e122527d38626d8", 16);
         assert (requiredPrivateKey.equals(torusKey.getPrivateKey()));
-        assertEquals("0x53010055542cCc0f2b6715a5c53838eC4aC96EF7", torusKey.getPublicAddress());
+        assertEquals("0x8b32926cD9224fec3B296aA7250B049029434807", torusKey.getPublicAddress());
     }
 
     @DisplayName("Test Aggregate getTorusKey")
@@ -66,8 +66,8 @@ public class SingleFactorAuthTest {
         loginParams = new LoginParams(TEST_AGGREGRATE_VERIFIER, TORUS_TEST_EMAIL, idToken,
                 new TorusSubVerifierInfo[]{new TorusSubVerifierInfo(TEST_VERIFIER, idToken)});
         TorusKey torusKey = singleFactorAuth.getKey(loginParams).get();
-        BigInteger requiredPrivateKey = new BigInteger("ad47959db4cb2e63e641bac285df1b944f54d1a1cecdaeea40042b60d53c35d2", 16);
+        BigInteger requiredPrivateKey = new BigInteger("6f8b884f19975fb0d138ed21b22a6a7e1b79e37f611d0a29f1442b34efc6bacd", 16);
         assert (requiredPrivateKey.equals(torusKey.getPrivateKey()));
-        assertEquals("0xE1155dB406dAD89DdeE9FB9EfC29C8EedC2A0C8B", torusKey.getPublicAddress());
+        assertEquals("0x62BaCa60f48C2b2b7e3074f7B7b4795EeF2afD2e", torusKey.getPublicAddress());
     }
 }
